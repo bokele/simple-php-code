@@ -1,7 +1,7 @@
 <?php
 
 
-$hearding = "About";
+$hearding = "Home";
 
 
 
