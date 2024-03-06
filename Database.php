@@ -5,10 +5,8 @@ class Database
     public $connection;
     public $statement;
 
-
     public function __construct($config, $username = 'root', $password = 'Bokele02')
     {
-
         $dsn = 'mysql:' . http_build_query($config, '', ';');
 
         $this->connection = new PDO($dsn, $username, $password, [
@@ -39,7 +37,7 @@ class Database
     {
         $result = $this->find();
 
-        if (!$result) {
+        if (! $result) {
             abort();
         }
 

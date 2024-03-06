@@ -1,8 +1,5 @@
 <?php
 
+$heading = 'About Us';
 
-$hearding = "About";
-
-
-
-require 'views/index.view.php';
+require "views/about.view.php";
