@@ -1,26 +1,22 @@
 <?php
 
+function dd($value)
+{
+    echo "<pre>";
+    var_dump($value);
+    echo "</pre>";
+
+    die();
+}
+
 function urlIs($value)
 {
     return $_SERVER['REQUEST_URI'] === $value;
 }
 
-
-function abort($code = 404)
+function authorize($condition, $status = Response::FORBIDDEN)
 {
-
-    http_response_code($code);
-    require "views/$code.view.php";
-
-    die();
-}
-
-
-function routerController($uri, $routes)
-{
-    if (array_key_exists($uri, $routes)) {
-        require $routes[$uri];
-    } else {
-        abort();
+    if (!$condition) {
+        abort($status);
     }
 }
