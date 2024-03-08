@@ -1,12 +1,10 @@
 <?php
 
+use Core\App;
 use Core\Validator;
 use Core\Database;
-use Core\App;
-
 
 $db = App::resolve(Database::class);
-
 $errors = [];
 
 if (!Validator::string($_POST['body'], 1, 1000)) {

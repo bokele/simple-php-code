@@ -1,0 +1,18 @@
+{
+    "name": "bokelewakizafranck/simple-php",
+    "description": "simple php code",
+ 
+    "authors": [
+        {
+            "name": "bokele wakiza franck",
+            "email": "bwakiza@gmail.com"
+        }
+    ],
+      "autoload": {
+    "psr-4": {
+      "Core\\": "Core/",
+      "Http\\": "Http/"
+    }
+  },
+    "require": {}
+}
